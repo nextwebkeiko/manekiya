@@ -84,6 +84,7 @@
     &-slider {
       overflow: hidden;
       touch-action: pan-y;
+      margin-bottom: 100px;
 
       .swiper-wrapper {
         align-items: flex-start;

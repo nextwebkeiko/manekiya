@@ -4381,6 +4381,7 @@ img {
 .reason-section__list-slider {
   overflow: hidden;
   touch-action: pan-y;
+  margin-bottom: 100px;
 }
 .reason-section__list-slider .swiper-wrapper {
   align-items: flex-start;
