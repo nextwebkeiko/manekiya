@@ -338,6 +338,16 @@
         &:nth-child(4) .reason-section__list-ph .u-hidden-md {
           object-position: 42% center;
         }
+
+        &:nth-child(4) .reason-section__list-head--auto {
+          @media screen and (max-width: 1180px) {
+            font-size: clamp(1.8rem, calc(1.8rem + (100vw - 768px) * 10 / 412), 2rem);
+
+            span span {
+              font-size: 0.786em;
+            }
+          }
+        }
       }
     }
 

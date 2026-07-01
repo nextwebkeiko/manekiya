@@ -4629,6 +4629,14 @@ img {
     object-position: 42% center;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+  .reason-section__list .swiper-slide:nth-child(4) .reason-section__list-head--auto {
+    font-size: clamp(1.8rem, 1.8rem + (100vw - 768px) * 10 / 412, 2rem);
+  }
+  .reason-section__list .swiper-slide:nth-child(4) .reason-section__list-head--auto span span {
+    font-size: 0.786em;
+  }
+}
 .reason-section__list h3 {
   position: relative;
   line-height: 1.58;
