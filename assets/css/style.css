@@ -4347,6 +4347,7 @@ img {
 @media screen and (min-width: 768px) {
   .reason-section__inner {
     max-width: 1086px;
+    margin: 0 auto 100px;
   }
 }
 .reason-section__title {
@@ -4394,7 +4395,7 @@ img {
   .reason-section__list-slider {
     width: 100%;
     max-width: 1086px;
-    margin: 24px auto 100px;
+    margin: 24px auto 60px;
     box-sizing: border-box;
   }
   .reason-section__list-slider .swiper-slide {
@@ -4409,7 +4410,7 @@ img {
 }
 @media screen and (max-width: 767px) {
   .reason-section__list-slider {
-    padding-top: 40px;
+    padding: 40px 8px 8px 0;
   }
   .reason-section__list-slider .swiper-slide {
     width: 338px;
@@ -4805,11 +4806,11 @@ img {
 
 @media screen and (max-width: 767px) {
   .reason-section__button-next {
-    right: 2px;
+    right: 10px;
     left: auto;
   }
   .reason-section__button-prev {
-    left: 2px;
+    left: 10px;
     right: auto;
     transform: translateY(-50%) scaleX(-1);
   }

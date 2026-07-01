@@ -50,6 +50,7 @@
 
     @include media-sm {
       max-width: 1086px;
+      margin: 0 auto 100px;
     }
   }
 
@@ -98,7 +99,7 @@
       @include media-sm {
         width: 100%;
         max-width: 1086px;
-        margin: 24px auto 100px;
+        margin: 24px auto 60px;
         box-sizing: border-box;
 
         .swiper-slide {
@@ -114,7 +115,7 @@
       }
 
       @include media-xs {
-        padding-top: 40px;
+        padding: 40px 8px 8px 0;
 
         .swiper-slide {
           width: 338px;
@@ -527,12 +528,12 @@
 
 @include media-xs {
   .reason-section__button-next {
-    right: 2px;
+    right: 10px;
     left: auto;
   }
 
   .reason-section__button-prev {
-    left: 2px;
+    left: 10px;
     right: auto;
     transform: translateY(-50%) scaleX(-1);
   }
