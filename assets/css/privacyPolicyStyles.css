@@ -1,0 +1,242 @@
+.privacy_box {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .privacy_box {
+    margin-top: 0;
+    padding-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+.privacy_box p {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .privacy_box p {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    letter-spacing: -0.01em;
+  }
+  .privacy_box .privacy_confirm {
+    font-size: 1.2rem;
+    font-feature-settings: "palt";
+    letter-spacing: 0;
+  }
+}
+.privacy_box a,
+.privacy_box span {
+  color: #bd0000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.privacy_box a:hover,
+.privacy_box span:hover {
+  text-decoration: none;
+}
+
+.privacy_box .privacy_confirm {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#privacy_modal {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 19999;
+  display: none;
+  top: 0;
+}
+
+#privacy_modal * {
+  box-sizing: border-box;
+}
+
+#privacy_modal.--active {
+  display: block;
+}
+
+#privacy_modal .modal_inner {
+  padding: 50px 100px;
+  background: #fff;
+  position: fixed;
+  height: 95%;
+  width: 90%;
+  overflow-y: scroll;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 19998;
+}
+
+#privacy_modal .modal_inner p {
+  white-space: pre-line;
+  margin: 0 0 20px;
+}
+
+#privacy_modal .modal_inner .upper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#privacy_modal .modal_inner .upper .close-btn {
+  padding: 14px 40px;
+  background: #000;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#privacy_modal .modal_inner .upper .close-btn p {
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+#privacy_modal #privacy_overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 19997;
+  background: #000;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #privacy_modal .modal_inner {
+    padding: 50px 12px !important;
+    width: 85% !important;
+  }
+  #privacy_modal .modal_inner .upper .close-btn {
+    padding: 7px 20px;
+  }
+}
+.privacy-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70vh;
+  overflow-y: scroll;
+  background-color: #fff;
+  z-index: 1000;
+  display: none;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .privacy-box {
+    width: 80vw;
+    padding: 6.25rem 3.75rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy-box {
+    width: 90%;
+    padding: 3.75rem 1.25rem;
+  }
+}
+.privacy-box h2 {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .privacy-box p {
+    margin: 1em 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy-box p {
+    margin-top: 1.875rem;
+  }
+}
+.privacy-box button {
+  background-color: #000;
+  display: block;
+  color: #fff;
+  position: absolute;
+  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
+  top: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .privacy-box button {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .privacy-box button {
+    font-size: 1.125rem;
+  }
+}
+.privacy-box_bg {
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.privacy-box_text {
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2.5rem;
+}
+
+.privacy-policy__heading {
+  font-size: 20px;
+}
+
+.privacy-policy-title {
+  text-decoration: underline;
+}
+
+.privacy-policy-title {
+  cursor: pointer;
+}
+
+.privacy-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.privacy-box ol {
+	list-style: decimal;
+	padding-left: 1.5em;
+	margin: 0.5em 0;
+}
+
+.privacy-box ol>li {
+	margin-bottom: 0.5em;
+}
+
+.privacy-box ol li {
+	list-style: decimal;
+	margin: 0.5em 0;
+}
+
+.privacy-box ol ol li {
+	list-style: lower-alpha;
+}

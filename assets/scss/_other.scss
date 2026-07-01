@@ -1,0 +1,378 @@
+.why-section {
+  padding: 80px 20px 100px;
+  font-family: "Zen Kaku Gothic New";
+  background: #f7ebed;
+
+  @include mq(md) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: grid;
+    gap: 68px;
+
+    @include mq(md) {
+      gap: 40px;
+    }
+  }
+
+  &__header {
+    position: relative;
+    width: fit-content;
+  }
+
+  &__head {
+    background: var(--color-primary);
+    position: relative;
+    color: #fff;
+    $skew: 3%;
+    clip-path: polygon($skew 0%, 100% 0%, (100% - $skew) 100%, 0% 100%);
+    width: fit-content;
+    margin: 0 0 35px;
+    padding-left: 106px;
+    font-size: 2.8rem;
+    line-height: 1.5;
+    padding: 8px 40px 8px 106px;
+    left: 10px;
+
+    @include media-xs {
+      font-size: 2rem;
+      $skew-sm: 5%;
+      clip-path: polygon($skew-sm 0%, 100% 0%, (100% - $skew-sm) 100%, 0% 100%);
+      padding: 8px 19px 8px 60px;
+      margin-bottom: 16px;
+    }
+
+    span {
+      color: #fff482;
+    }
+  }
+
+  &__num {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    padding: 8px;
+    background: var(--color-primary);
+    z-index: 1;
+    top: 50%;
+    transform: translate(0,-50%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    @include mq(md) {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      transform: none;
+      top: -6px;
+    }
+
+    span {
+      color: var(--color-primary);
+      text-align: center;
+      font-family: Roboto;
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+
+      @include media-xs {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include mq(md) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__ph {
+    width: 536px;
+
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    p {
+      font-size: 1.7rem;
+
+      @include mq(md) {
+        font-size: 1.5rem;
+      }
+
+      span {
+        font-weight: bold;
+        background:linear-gradient(transparent .9em,#fff482 .5em);
+      }
+    }
+  }
+
+  &__content-list {
+    border-radius: 4px;
+    border: 2px solid var(--__, #3697BF);
+    background: #FFF;
+    padding: 20px 16px;
+    margin-bottom: 8px;
+
+    ul {
+      display: grid;
+      gap: 8px;
+
+      li {
+        font-size: 1.7rem;
+        padding-left: 21px;
+        background: url('../img/top/icon-check.png') no-repeat left 0.5em / auto 0.9em;
+
+        span {
+          color: var(--color-primary);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  &__content-bl {
+    text-align: center;
+  }
+
+  &__item:nth-child(even) &__header{
+    @include mq-up(md) {
+      margin-left: auto;
+    }
+  }
+
+  &__item:nth-child(even) &__ph{
+    @include mq-up(md) {
+      order: 2;
+    }
+  }
+}
+
+.problem-section {
+  text-align: center;
+
+
+  &__upper {
+    background: url('../img/top/bg-problem.png') no-repeat center bottom / cover;
+    padding-bottom: 100px;
+
+    @include mq(md) {
+     background: url('../img/top/bg-problem-sm.png') no-repeat center bottom / cover;
+     padding-bottom: 58px;
+    }
+
+    img {
+      width: 953px;
+      position: relative;
+      top: -30px;
+
+      @include mq(md) {
+        width: 335px;
+        top: -15px;
+      }
+    }
+  }
+
+  &__lower {
+    padding: 36px 20px 55px;
+    background: var(--Linear, linear-gradient(180deg, #FFF 42.67%, #F2EBC2 100%));
+
+    @include mq(md) {
+      padding-bottom: 32px;
+      padding-top: 19px;
+    }
+
+    img {
+      width: 1010.5px;
+
+      @include mq(md) {
+        width: 316px;
+      }
+    }
+  }
+}
+
+.media-seciton {
+  padding: 80px 20px;
+  background: url('../img/top/bg-media.png') no-repeat center center / cover;
+
+  @include mq(md) {
+    background: url('../img/top/bg-media-sm.png') no-repeat center center / cover;
+    padding: 40px 20px;
+  }
+
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__lead {
+    color: #222;
+    font-weight: bold;
+    font-size: 2.4rem;
+    letter-spacing: 0.96px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    margin: 0 0 6px;
+
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+
+    &::before,
+    &::after {
+      width: 1.5px;
+      content: '';
+      display: block;
+      background: currentColor;
+      height: 1.1em;
+    }
+
+    &::before {
+      transform: rotate(-20deg);
+    }
+    &::after {
+      transform: rotate(20deg);
+    }
+  }
+
+  &__content {
+    text-align: center;
+
+    img {
+      width: 989px;
+      @include mq(md) {
+       width: 339px;
+      }
+    }
+  }
+}
+
+.plan-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #FCF7F7 0%, #F5E3E6 100%);
+  font-family: "Zen Kaku Gothic New";
+
+  @include mq(md) {
+    padding: 40px 20px;
+  }
+
+
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 0 32px;
+
+    @include mq(md) {
+      margin: 0 0 16px;
+    }
+    img {
+      width: 759px;
+
+      @include mq(md) {
+        width: 335px;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include mq(md) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__ph {
+    width: 536px;
+
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1;
+
+    p {
+      font-size: 1.7rem;
+      font-weight: 500;
+
+      @include mq(md) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__list {
+    border-radius: 4px;
+    border: 2px solid var(--__, #3697BF);
+    background: #FFF url('../img/top/icon-plan.png') no-repeat center center / 72px auto;
+    padding: 20px 110px 20px 34px;
+    margin: 22px 0;
+    background-position: right 34px center;
+
+    @include mq(md) {
+      margin: 10px 0;
+      padding: 15px 80px 15px 16px;
+      background-size: 60px auto;
+      background-position: right 15px center;
+    }
+
+    ul {
+      display: grid;
+      gap: 8px;
+
+      li {
+        font-size: 2rem;
+        padding-left: 21px;
+        background: url('../img/top/icon-check.png') no-repeat left 0.5em / auto 0.9em;
+        color: var(--color-primary);
+        font-weight: bold;
+
+        @include mq(md) {
+          font-size: 1.8rem;
+        }
+
+        span {
+          color: var(--color-primary);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

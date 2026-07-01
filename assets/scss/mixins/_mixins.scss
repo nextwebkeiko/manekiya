@@ -1,0 +1,43 @@
+@charset "utf-8";
+//====================================================================================================
+
+ //Mixin
+
+//====================================================================================================
+
+@import "layout";
+@import "pie";
+@import "opacity";
+@import "text-overflow";
+@import "text-indent";
+@import "mous-effect";
+@import "clearifx";
+@import "font-size";
+@import "transition";
+@import "keyframes";
+@import "animation";
+@import "flexbox";
+@import "calc";
+@import "fz-vw";
+
+
+$smallBreak: 767px;
+$mediumBreak: 768px;
+
+
+@mixin media-xs() {
+	@media screen and (max-width: $smallBreak) {
+		@content;
+	}
+}
+
+@mixin media-sm() {
+	@media screen and (min-width: $mediumBreak) {
+		@content;
+	}
+}
+
+@mixin section-inner() {
+	max-width: 1000px;
+	margin: 0 auto;
+}

@@ -1,0 +1,327 @@
+.about-section {
+	padding: 60px 20px 60px;
+	position: relative;
+  font-family: "Zen Kaku Gothic New";
+  background: url('../img/top/bg-about.png') no-repeat center center / cover;
+
+	@include media-xs {
+		padding: 40px 20px;
+    background: url('../img/top/bg-about-sm.png') no-repeat center center / cover;
+	}
+
+	@keyframes bg-about-slider {
+		from {
+			background-position: 0 0;
+		}
+
+		to {
+			background-position: -1555px 0;
+		}
+	}
+
+	@keyframes bg-about-slider-sm {
+		from {
+			background-position: 0 0;
+		}
+
+		to {
+			background-position: -1502px 0;
+		}
+	}
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 990px;
+  }
+
+	&__title {
+		text-align: center;
+		margin: 0 0 20px;
+    font-size: 1rem;
+		line-height: 1;
+		position: relative;
+
+		@include media-xs {
+			font-size: 2.6rem;
+			margin-bottom: 8px;
+			line-height: 1.4;
+		}
+
+		img {
+			width: 389.5px;
+			vertical-align: top;
+
+			@include media-xs {
+				width: 253px;
+			}
+		}
+
+		span {
+			font-size: 3rem;
+
+			@include media-xs {
+				font-size: 2.6rem;
+			}
+		}
+	}
+
+	&__body {
+		align-items: center;
+		gap: 40px;
+		display: flex;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 8px 8px 0 0 #B70005;
+    padding: 40px;
+
+		@include media-xs {
+			flex-direction: column;
+			gap: 20px;
+      padding: 20px;
+		}
+
+		p {
+			font-size: 1.8rem;
+			line-height: 1.8;
+			font-weight: 500;
+
+			@include media-xs {
+				font-size: 1.6rem;
+        letter-spacing: 0;
+			}
+
+			span {
+				font-weight: bold;
+        color: var(--color-primary);
+			}
+
+      small {
+        font-size: 1.2rem;
+      }
+		}
+	}
+
+  &__caption {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 1.2rem;
+  }
+
+	&__content {
+
+    flex: 1;
+    @include mq(md) {
+      min-height: 0;
+      background: none;
+    }
+	}
+
+	&__upper {
+
+	}
+
+	&__lower {
+		width: 100%;
+		padding-left: 15px;
+	}
+
+	&__ph {
+		position: relative;
+
+		@include media-xs {
+      //
+		}
+
+		img {
+			position: relative;
+			width: 472px;
+
+			@include media-xs {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.about-lineup {
+  margin: 0 0 40px;
+
+  @include mq(md) {
+    margin: 0 0 26px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 34px;
+
+    @include mq(md) {
+      margin: 0 0 25px;
+    }
+
+    img {
+      width: 714px;
+    }
+  }
+
+  &__pict {
+    height: 248px;
+    animation: 12s bg-scroll linear infinite;
+    background: url(../img/top/pict-lineup.png) repeat-x 0 0 / auto 100%;
+    width: 100%;
+
+    @include mq(md) {
+      height: 185px;
+      animation: 10s bg-scroll-sm linear infinite;
+    }
+  }
+
+  @keyframes bg-scroll {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 1709px 0;
+    }
+  }
+
+  @keyframes bg-scroll-sm {
+    from {
+      background-position: 0 0;
+    }
+
+    to {
+      background-position: 1277px 0;
+    }
+  }
+
+}
+
+.about-lower {
+  padding: 0 20px 90px;
+  background: linear-gradient(0deg, #F3F1E7 0%, #FFF 42.54%);
+
+  &__title {
+    text-align: center;
+    margin: 0 0 20px;
+
+    img {
+      width: 541px;
+
+      @include mq(md) {
+        width: 264px;
+      }
+    }
+  }
+
+  &__g {
+    text-align: center;
+    img {
+      width: 523px;
+    }
+  }
+}
+
+.about-background {
+	background: #f0f8fc;
+	position: relative;
+	text-align: center;
+	padding: 186px 20px 70px;
+
+	@include media-xs {
+		padding-top: 65px;
+		padding-bottom: 50px;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	&__head {
+		margin-bottom: 35px;
+
+		@include media-xs {
+			margin-bottom: 25px;
+		}
+
+		img {
+			width: 205px;
+
+			@include media-xs {
+				width: 143px;
+			}
+		}
+	}
+
+	&__bl {
+		margin-top: 28px;
+
+		@include media-xs {
+			margin-top: 50px;
+		}
+
+		img {
+			width: 1000px;
+
+			@include media-xs {
+				width: 335px;
+			}
+		}
+	}
+}
+
+.background-swiper {
+	position: relative;
+
+	&__element {
+		width: 310px;
+
+		@include media-xs {
+			width: 211px !important;
+			img {
+				//
+			}
+		}
+	}
+
+	&__list {
+		@include media-sm {
+			gap: 35px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
+
+.awards-section {
+  padding: 40px 20px 90px;
+
+  &__head {
+    text-align: center;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 16px;
+
+    @include mq(md) {
+      font-size: 2.4rem;
+      line-height: 1.5;
+      margin: 0 0 6px;
+    }
+
+    span {
+      color: #ff6b75;
+    }
+  }
+
+  &__lower {
+   text-align: center;
+
+   img {
+    width: 458px;
+
+    @include mq(md) {
+      width: 356px;
+    }
+   }
+  }
+}

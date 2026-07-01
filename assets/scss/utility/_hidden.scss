@@ -1,0 +1,60 @@
+
+@include mq(xs) {
+  .u-hidden-xs {
+    display: none !important;
+  }
+}
+
+@include mq(sm) {
+  .u-hidden-sm {
+    display: none !important;
+  }
+}
+
+@include mq(md) {
+  .u-hidden-md {
+    display: none !important;
+  }
+}
+
+@include mq(lg) {
+  .u-hidden-lg {
+    display: none !important;
+  }
+}
+
+@include mq(xl) {
+  .u-hidden-xl {
+    display: none !important;
+  }
+}
+
+@include mq-up(xs) {
+  .u-visible-xs {
+    display: none !important;
+  }
+}
+
+@include mq-up(sm) {
+  .u-visible-sm {
+    display: none !important;
+  }
+}
+
+@include mq-up(md) {
+  .u-visible-md {
+    display: none !important;
+  }
+}
+
+@include mq-up(lg) {
+  .u-visible-lg {
+    display: none !important;
+  }
+}
+
+@include mq-up(xl) {
+  .u-visible-xl {
+    display: none !important;
+  }
+}

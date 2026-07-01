@@ -1,0 +1,33 @@
+@charset "utf-8";
+//最大幅
+@mixin l-wrapper($screen-width:960, $screen-fsize:13,$target:ie10) {
+  margin-left: auto;
+  margin-right: auto;
+  //max-width: ($screen-width/$screen-fsize) + rem;
+  //max-width: $screen-width + px;
+  //width: 100%;
+
+  min-width: $screen-width + px;
+  width: $screen-width + px;
+
+  @if $target == ie8 {
+    .ie8 & {
+      //width: $screen-width + px;
+    }
+  }
+}
+
+//左右の隙間
+@mixin l-gap($screen-fsize:13) {
+  padding-right: (10/$screen-fsize) + rem;
+  padding-left: (10/$screen-fsize) + rem;
+}
+
+//1カラムに落とす
+@mixin l-one($direction:left) {
+  width: auto;
+  float: none;
+  @if $direction == left {
+    margin-left: 0;
+  }
+}

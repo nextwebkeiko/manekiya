@@ -1,0 +1,83 @@
+.cta-content {
+  background: url('../img/top/bg-cta.png') no-repeat center center / cover;
+	padding: 65px 20px 135px;
+	color: #fff;
+  position: relative;
+  z-index: 3;
+
+	@include media-xs {
+		padding: 40px 20px 100px;
+    padding-right: 10px
+	}
+
+	&__inner {
+		max-width: 860px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 2.7rem;
+		margin: 0 0 25px;
+
+		@include media-xs {
+			font-size: 1.8rem;
+			line-height: 1.4;
+			margin-bottom: 20px;
+		}
+
+		span {
+			font-size: 3.2rem;
+
+			@include media-xs {
+				font-size: 2.3rem;
+			}
+		}
+	}
+
+	&__list {
+		width: fit-content;
+		margin: 0 auto;
+		display: grid;
+		gap: 20px;
+
+		@include media-xs {
+			border-width: 1px;
+      gap: 12px;
+		}
+
+		li {
+			font-weight: bold;
+			font-size: 2.5rem;
+			background: url('../img/top/icon-check.png') no-repeat left center / 35px auto;
+			padding-left: 50px;
+			line-height: 1.4;
+
+			@include media-xs {
+				font-size: 1.6rem;
+        background-size: 24px auto;
+        padding-left: 36px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+			}
+
+			span {
+				color: #ffe262;
+			}
+		}
+	}
+
+  &__image {
+    text-align: center;
+
+    img {
+      width: 848px;
+
+      @include mq(md) {
+        width: 345px;
+        margin-right: -10px;
+      }
+    }
+  }
+}

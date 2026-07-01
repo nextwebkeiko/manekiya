@@ -1,0 +1,282 @@
+.btn {
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
+	padding: 6px 12px;
+	padding-left: 76px;
+	padding-right: 24px;
+	width: -webkit-max-content;
+	width: -moz-max-content;
+	width: max-content;
+	height: 64px;
+  background: linear-gradient(180deg, #27C500 0%, #00A01F 32.3%, #00A01F 65%, #27C500 100%);
+	background-position: calc(100% - 20px) calc(50% + 3px);
+	border-radius: 9999px;
+	color: #fff;
+	font-size: 2.5rem;
+	text-decoration: none;
+	line-height: 1.3;
+	font-weight: 800;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.20));
+	width: 372px;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  border: 2px solid #fff;
+
+	@include media-xs {
+		width: 335px;
+		height: 61px;
+		padding-left: 68px;
+		line-height: 1.1;
+		padding-top: 10px;
+		padding-bottom: 6px;
+		background-size: 12px auto;
+		background-position: calc(100% - 16px) calc(50% + 3px);
+	}
+
+  &::after {
+    content: '';
+    width: 10px;
+    height: 17px;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    right: 15px;
+
+  }
+}
+
+.btn_appeal {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	background: #ffed61;
+
+	@include media-xs {
+		width: 44px;
+		height: 44px;
+		border-width: 3px;
+	}
+
+  @include mq(md) {
+
+  }
+}
+
+.btn_appeal-inner {
+	text-align: center;
+	color: #009420;
+	font-size: 1.4rem;
+	font-weight: bold;
+	line-height: 1.1;
+
+	@include media-xs {
+		font-size: 1.4rem;
+	}
+}
+
+.btn_recommend {
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 500;
+	// text-align: center;
+	letter-spacing: 0.03em;
+  padding-left: 3.4px;
+  margin-bottom: -2px;
+
+	@include media-xs {
+		font-size: 1.3rem;
+	}
+}
+
+.btn_main {
+	em {
+		font-style: normal;
+		font-size: 2.5rem;
+		color: #ffed61;
+		line-height: 1.1;
+
+		@include media-xs {
+			font-size: 2.3rem;
+		}
+
+    span {
+      color: #fff;
+    }
+	}
+}
+
+.btn--gritter {
+	overflow: hidden;
+	position: relative;
+}
+
+.btn--gritter::before {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 10%;
+	position: absolute;
+	top: -50%;
+	left: -78px;
+	background-color: #fff;
+	opacity: 0;
+	-webkit-transform-origin: left bottom;
+	transform-origin: left bottom;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-animation: reflection 3s ease-in-out infinite;
+	animation: reflection 3s ease-in-out infinite;
+}
+
+.btn-wrap {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 17px;
+	padding-right: 17px;
+	margin-top: 16px;
+}
+
+.cta-section {
+  padding: 24px 0;
+  background: #d7ae25;
+
+	@include media-xs {
+    padding: 24px 0;
+	}
+
+  &__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    @include media-xs {
+      display: block;
+    }
+  }
+
+  &--lower {
+    padding-top: 24px;
+    padding-bottom: 90px;
+
+    @include mq(md) {
+      padding-bottom: 110px;
+    }
+  }
+
+  &__head {
+    text-align: center;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: bold;
+    background: url('../img/top/bg-cta-head.png') no-repeat center bottom / auto 30px;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 19px;
+
+    @include mq(md) {
+      background: url('../img/top/bg-cta-head-sm.png') no-repeat center bottom / auto 44px;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      margin: 0 0 16px;
+    }
+
+    span {
+      color: #ffed61;
+    }
+  }
+
+  &__text {
+    letter-spacing: 1.2px;
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: right;
+    line-height: 1.2;
+    padding-right: 34px;
+    position: relative;
+
+    @include media-xs {
+      width: fit-content;
+      margin: 0 auto 16px;
+      font-size: 1.8rem;
+      text-align: center;
+      border: 0;
+      padding: 0 0 41px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 21px;
+      height: 14px;
+      background: url('../img/top/icon-cta-ar.png') no-repeat center top / 100% auto;
+      right: 0;
+      top: 50%;
+      transform: translate(0,-50%);
+      position: absolute;
+
+      @include mq(md) {
+        transform: rotate(90deg);
+        top: auto;
+        bottom: 0;
+        right: auto;
+        left: 50%;
+        width: 23px;
+        height: 17px;
+        margin-left: -9px;
+      }
+    }
+
+    span {
+      color: #ffed61;
+      background-image : linear-gradient(to right, #ffed61, #ffed61 4px, transparent 4px, transparent 12px);  /* 幅2の線を作る */
+      background-size: 9px 3px;          /* グラデーションの幅・高さを指定 */
+      background-position: left bottom;  /* 背景の開始位置を指定 */
+      background-repeat: repeat-x;       /* 横向きにのみ繰り返す */
+      padding-bottom: 4px;
+      padding-right: 5px;
+      font-weight: bold;
+
+      @include media-xs {
+        background-size: 8px 2px;
+      }
+    }
+  }
+
+  &__pict {
+    width: 495px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+
+    @include media-xs {
+      width: calc(100% + 40px);
+      margin: 0 -20px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,280 @@
+/* ---------------------------------------------------------
+フッター
+----------------------------------------------------------*/
+.footer {
+	background: #b70006;
+	padding-top: 35px;
+	font-family: $font-family-noto;
+  color: #fff;
+
+
+	@media #{$scr_sp} {
+		padding: 30px 15px 0;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+}
+
+.footer_logo {
+	max-width: 948px;
+	margin: 0 auto 23px;
+	padding: 0 50px;
+
+
+	@include media-xs {
+		padding: 0;
+		text-align: center;
+	}
+
+
+	img {
+		width: 405px;
+
+		@include media-xs {
+			width: 335px;
+		}
+	}
+}
+
+.footer_company_info {
+	border-left: 2px solid #B68366;
+	padding-left: 8px;
+	font-size: 1.2rem;
+	margin: 10px 0 10px 15px;
+}
+
+.footer_company {
+	font-size: 1.4rem;
+	line-height: 1.57;
+	margin: 0 auto 34px;
+	position: relative;
+
+	strong {
+		font-weight: 600;
+	}
+
+	@media #{$scr_sp} {
+		font-size: 1.4rem;
+		display: block;
+		padding-bottom: 0px;
+		margin-bottom: 5px;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	&_inner {
+		max-width: 948px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin: 0 auto;
+		padding: 0 50px;
+
+		@media #{$scr_sp} {
+			display: block;
+			padding: 0;
+		}
+	}
+
+	&_ttl {
+		margin-top: 0 !important;
+	}
+
+	p {
+		// margin-top: 1.5em;
+	}
+}
+
+.footer_ad_links {
+	margin: 20px 0 0;
+
+	@include media-xs {
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+    border: 1px solid #fff;
+		font-weight: 500;
+		font-size: 1.3rem;
+		display: inline-block;
+		border-radius: 20px;
+		text-decoration: none;
+		padding: 8px 28px 8px 10px;
+		position: relative;
+
+		@media #{$scr_sp} {
+			font-size: 1.2rem;
+			padding: 10px 27px 10px 10px;
+			border-radius: 50px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 8px;
+			height: 12px;
+			background: currentColor;
+			clip-path: polygon(100% 50%, 0 0, 0 100%);
+			position: absolute;
+			top: 50%;
+			transform: translate(0, -50%);
+			right: 10px;
+
+			@media #{$scr_sp} {
+				right: 12.5px;
+			}
+		}
+	}
+}
+
+.footer_company_body {
+	//
+}
+
+.footer_left {
+
+	@media #{$scr_sp} {
+		margin: 0 0 24px 0;
+		width: 100%;
+		padding: 0;
+		border: none;
+	}
+}
+
+.footer_right {
+
+	@media #{$scr_sp} {
+		width: 100%;
+		border-left: 0;
+		padding: 0 0 40px;
+		padding-top: 0;
+	}
+}
+
+.footer_bottom {
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 1.4rem;
+	font-weight: 500;
+
+	@media #{$scr_sp} {
+		// padding: 7px 0;
+		font-size: 1.2rem;
+	}
+}
+
+.footer_about {
+	background: #fff;
+	width: 860px;
+	margin: 0 auto 32px;
+	border-radius: 8px;
+	overflow: hidden;
+	padding: 13px 13px 16px;
+
+	@media #{$scr_sp} {
+		padding: 22px 20px;
+		font-size: 2rem;
+		display: block;
+		padding: 0;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	&_logo {
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		font-size: 1.6rem;
+		color: #000;
+
+		@media #{$scr_sp} {
+			width: 100%;
+			text-align: center;
+			font-size: 1.8rem;
+			padding: 12px 5px 0;
+		}
+
+		img {
+			width: 216px;
+
+			@media #{$scr_sp} {
+				width: 186px;
+			}
+		}
+
+		span {
+			margin-top: -5px;
+
+			@media #{$scr_sp} {
+				display: inline-block;
+				margin-top: -3px;
+			}
+		}
+	}
+
+	&_inner {
+		max-width: 1000px;
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+
+		@media #{$scr_sp} {
+			flex-direction: column;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&_ph {
+		margin-right: 45px;
+		font-weight: bold;
+		display: flex;
+
+		@media #{$scr_sp} {
+			margin-right: 0;
+		}
+
+		img {
+			width: 262px;
+
+			@media #{$scr_sp} {
+				width: 184px;
+			}
+		}
+
+		span {
+			font-size: 2.4rem;
+			margin-top: 15px;
+			margin-left: -5px;
+
+			@media #{$scr_sp} {
+				font-size: 1.7rem;
+				margin-top: 10px;
+				margin-left: -2px;
+			}
+		}
+	}
+
+	&_text {
+		flex: 1;
+		font-size: 1.4rem;
+		letter-spacing: 0.05em;
+		color: #000;
+		padding: 0 12px;
+
+		@media #{$scr_sp} {
+			padding: 0 15px 15px;
+			font-size: 1.2rem;
+		}
+	}
+}

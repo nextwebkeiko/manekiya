@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+@import 'normalize';
+@import 'util';
+
+// 使いそうな色設定
+// -------------------------
+$color_red: #e70012;
+$color_crimson: #cc0000;
+$color_blue: #68b3e3;
+$color_light_blue: #00d3d3;
+$color_green: #009944;
+$color_olive: #04803b;
+$color_light_green: #3dce88;
+$color_yellow: #ffe900;
+$color_light_yellow: #faea67;
+$color_white: #ffffff;
+$color_black: #7d7d7d;
+$color_pink: #ec6b66;
+$color_brown: #bb7d05;
+$color_gray: #444444;
+$color_orange: #ea7f00;
+
+// SNS色設定
+// -------------------------
+$color_facebook: #3b5998;
+$color_twitter: #1da1f2;
+$color_instagram: #cf2e92;
+$color_line: #00b900;
+$color_pinterest: #e60024;
+
+// 使いそうなフォント設定
+// -------------------------
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace: Monaco, Menlo, Consolas, 'Courier New', monospace;
+$font-family-hiragino: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'YuGothic', 'Yu Gothic', '游ゴシック', '-Meiryo', 'メイリオ', sans-serif;
+$font-family-mincho: 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+$font-family-noto-serif: 'Noto Serif JP', serif;
+$font-family-yugothic: 'proxima-nova', Helvetica, Arial, 'Meiryo', 'メイリオ', '游ゴシック', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'Hiragino Kaku Gothic Pro', 'ＭＳ ゴシック', sans-serif;
+$font-family-yumincho: '游明朝', 'YuMincho', 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', $font-family-noto-serif;
+$font-family-noto: 'Noto Sans JP', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-cormorant: 'Cormorant',serif;
+
+// サイトカラー
+// -------------------------
+$color_text: #000;
+$color_text-light: lighten($color_text, 40%);
+$color_bg: #f2f7f4;
+$color_bg-sub: #f7f6f2;
+
+// リンクカラー
+// -------------------------
+$color_link: #a6a7ab;
+$color_link-hover: #3d52b4;
+
+// ボーダーカラー
+// -------------------------
+$color_border: #000;
+$color_border-dotted: lighten($color_text, 65%);
+
+// フォント設定
+// -------------------------
+$line-height-base: 1.5;
+$font-family-base: $font-family-yugothic;
+$font-weight-thin: 100;
+
+// 幅設定
+// -------------------------
+$screen: 950px;
+$container-width: $screen;
+$alpha-width: 910;
+$beta-width: 210;
+
+// 隙間
+// -------------------------
+$base-clearance1: 12;
+$base-clearance2: 20;
+$base-clearance3: 30;
+
+// ブレイクポイント
+// -------------------------
+$scr_sp: 'screen and (max-width:767px)';
+$scr_pc: 'screen and (min-width:768px) , print';
+$scr_pc2: 'screen and (min-width:768px) and (max-width:1020px)';
+$scr_pc3: 'screen and (min-width:768px) and (max-width:1140px)';
+
+// レティーナ対応
+// -------------------------
+$scr_retina: 'screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and ( min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)';

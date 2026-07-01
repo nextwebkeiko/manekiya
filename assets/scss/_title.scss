@@ -1,0 +1,61 @@
+.section-title {
+  text-align: center;
+  margin: 0 0 32px;
+  color: var(--color-primary);
+  line-height: 1.5;
+  font-size: 4rem;
+  padding: 0 0 28px;
+  background: url('../img/top/bg-head-low.png') no-repeat center bottom / auto 12px;
+  font-family: "Zen Kaku Gothic New";
+  letter-spacing: 1.6px;
+
+
+  @include mq(md) {
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    background-size: auto 10px;
+    padding-bottom: 25px;
+    letter-spacing: 1px;
+  }
+
+	img {
+		height: 99px;
+
+		@include media-xs {
+			height: 61px;
+		}
+	}
+
+	&--s {
+		@include media-xs {
+			font-size: 2.8rem;
+
+			span {
+				font-size: 2.8rem;
+			}
+		}
+	}
+
+	&--reason {
+
+		img {
+			height: 213px;
+
+			@include media-xs {
+				height: 135px;
+			}
+		}
+	}
+
+  &--white {
+    color: #fff;
+    border-color: #fff;
+    background-image: url('../img/top/bg-head-low-w.png');
+
+
+    span {
+      color: white;
+    }
+
+  }
+}

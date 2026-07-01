@@ -1,0 +1,117 @@
+
+@use "sass:math";
+
+.u-bg-marker {
+  background: linear-gradient(transparent 60%, rgba(255, 255, 0, 0.5) 0%) !important;
+}
+
+.u-bg-highlight {
+  background-color: var(--highlight-color, #ffff00) !important;
+}
+
+//font-size
+$prefix: 'u-fz';
+
+@for $i from 10 through 100 {
+  .#{$prefix}-#{$i} {
+    font-size: #{math.div($i, 10)}rem !important;
+  }
+}
+
+@include mq(md) {
+  @for $i from 10 through 100 {
+    .#{$prefix}-md-#{$i} {
+      font-size: #{math.div($i, 10)}rem !important;
+    }
+  }
+}
+
+//weight
+$font-weight-steps: (
+  thin: 100,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  "black": 900
+);
+$prefix: 'u-fw';
+
+// 通常クラス
+@each $key, $val in $font-weight-steps {
+  .#{$prefix}-#{$key} {
+    font-weight: $val !important;
+  }
+}
+
+// ブレークポイント（md）用クラス
+@include mq(md) {
+  @each $key, $val in $font-weight-steps {
+    .#{$prefix}-md-#{$key} {
+      font-weight: $val !important;
+    }
+  }
+}
+
+// align
+$prefix: 'u-ta';
+
+$text-align-values: (
+  left,
+  center,
+  right,
+  justify,
+  start,
+  end
+);
+
+// 通常クラス
+@each $val in $text-align-values {
+  .#{$prefix}-#{$val} {
+    text-align: $val !important;
+  }
+}
+
+// ブレークポイント（md）クラス
+@include mq(md) {
+  @each $val in $text-align-values {
+    .#{$prefix}-md-#{$val} {
+      text-align: $val !important;
+    }
+  }
+}
+
+// line-height
+$prefix: 'u-lh';
+
+@for $i from 10 through 25 {
+  $val: math.div($i, 10); // 小数で割る
+  .#{$prefix}-x#{$i} {
+    line-height: $val !important;
+  }
+}
+
+@include mq(md) {
+  @for $i from 10 through 25 {
+    $val: math.div($i, 10);
+    .#{$prefix}-md-x#{$i} {
+      line-height: $val !important;
+    }
+  }
+}
+
+// ベースフォント（通常文用）
+.u-ff-base {
+  font-family: var(--font-base) !important;
+}
+
+// サブフォント（補足・注釈など）
+.u-ff-sub {
+  font-family: var(--font-sub) !important;
+}
+
+// 英字フォント（見出しや英数字用）
+.u-ff-en {
+  font-family: var(--font-en) !important;
+}

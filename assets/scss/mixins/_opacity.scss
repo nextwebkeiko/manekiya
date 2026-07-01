@@ -1,0 +1,14 @@
+@charset "utf-8";
+// @ opacity
+// ------------------------------------------------------------
+@mixin opacity($num:0.7,$target:ie10){
+
+  @if $target != ie8 {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    filter: alpha(opacity=($num*100));
+  }
+  -khtml-opacity: $num;
+  -moz-opacity: $num;
+  opacity: $num;
+
+}

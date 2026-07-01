@@ -1,0 +1,27 @@
+@charset "utf-8";
+// @ fz-vw
+// -------------------------
+
+//PC
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw($size,$viewport:1440){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw($font_size);
+}
+
+//SP
+// 第一引数で基準となる画面幅のフォントサイズ、第二引数で基準となる画面幅を入力
+@function get_vw_sp($size,$viewport:750){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz_vw_sp($font_size:10){
+  font-size: $font_size * 1px;
+  font-size: get_vw_sp($font_size);
+}

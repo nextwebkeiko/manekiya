@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* ---------------------------------------------------------
+   base.css
+----------------------------------------------------------*/
+@media #{$scr_sp} {
+}
+@media #{$scr_pc} {
+}
+@media #{$scr_retina} {
+}
+// transform: translateX(-50%);
+/* ---------------------------------------------------------
+   base.css
+----------------------------------------------------------*/
+html {
+	font-size: 62.5%;
+	margin-top: 0 !important;
+}
+body {
+	color: #222;
+	background: #ffffff;
+	font-family: "Noto Sans JP", sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.8;
+	position: relative;
+  min-width: 1000px;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	@media #{$scr_sp} {
+		min-width: 320px;
+		font-size: 1.4rem;
+	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+svg {
+	width: 50px;
+	height: 50px;
+}
+ol,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: bottom;
+	max-width: 100%;
+}
+.sp-only {
+	display: none !important ;
+	@media #{$scr_sp} {
+		display: block !important;
+	}
+}
+.sp-none {
+	@media #{$scr_sp} {
+		display: none !important;
+	}
+}
+.pc-only {
+	display: none !important;
+	@media #{$scr_pc} {
+		display: block !important;
+	}
+}
+.pc-none {
+	@media #{$scr_pc} {
+		display: none !important;
+	}
+}
+.wrapper {
+	margin: 0 auto;
+	box-sizing: border-box;
+
+	* {
+		box-sizing: border-box;
+	}
+	@media #{$scr_sp} {
+		padding: 0 20px;
+		width: 100%;
+	}
+}
+.overflow {
+	// overflow-x: hidden;
+}
+
+@include media-xs {
+	.hidden-xs {
+		display: none;
+	}
+}
+
+@include media-sm {
+	.visible-xs {
+		display: none;
+	}
+}
+
+.cta_block {
+	max-width: 760px;
+	margin: 0 auto;
+	background: #3ca46d url('../img/top/bg-cta.png') no-repeat 60% center;
+	box-shadow: 0px 0px 20px 2px rgba(45, 45, 45, 0.09);
+	padding: 16px 20px 16px 30px;
+
+	@media #{$scr_sp} {
+		display: none;
+	}
+
+	&_inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&_text {
+		font-weight: bold;
+		color: #fff;
+		font-size: 2.2rem;
+	}
+}
+
+/* ---------------------------------------------------------
+フェードインアニメーション
+----------------------------------------------------------*/
+.fadein {
+	opacity: 0;
+	transform: translate(0, 50px);
+	transition: all 500ms;
+
+	@media #{$scr_sp} {
+		transform: translate(0, 30px);
+	}
+}
+
+/* 画面内に入った状態 */
+.fadein.scrollin {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+// .reason_list {
+// 	.fadein {
+// 		&:nth-of-type(2) {
+// 			transition-delay: 200ms;
+// 		}
+// 	}
+// }
+// .sales_list {
+// 	.fadein {
+// 		&:nth-of-type(2) {
+// 			transition-delay: 200ms;
+// 		}
+// 	}
+// }
+// .voice_list {
+// 	.fadein {
+// 		&:nth-of-type(2) {
+// 			transition-delay: 200ms;
+// 		}
+// 	}
+// }
+
+.overflow {
+	overflow: hidden;
+}

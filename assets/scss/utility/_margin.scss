@@ -1,0 +1,91 @@
+
+$margin-steps: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100;
+$prefix: 'u-m';
+
+// 通常（ベース）クラス
+@each $val in $margin-steps {
+  .#{$prefix}t-#{$val} {
+    margin-top: #{$val}px !important;
+  }
+  .#{$prefix}r-#{$val} {
+    margin-right: #{$val}px !important;
+  }
+  .#{$prefix}b-#{$val} {
+    margin-bottom: #{$val}px !important;
+  }
+  .#{$prefix}l-#{$val} {
+    margin-left: #{$val}px !important;
+  }
+  .#{$prefix}x-#{$val} {
+    margin-left: #{$val}px !important;
+    margin-right: #{$val}px !important;
+  }
+  .#{$prefix}y-#{$val} {
+    margin-top: #{$val}px !important;
+    margin-bottom: #{$val}px !important;
+  }
+  .#{$prefix}-#{$val} {
+    margin: #{$val}px !important;
+  }
+}
+
+// ブレークポイント（md）用クラス
+@include mq(md) {
+  @each $val in $margin-steps {
+    .#{$prefix}t-md-#{$val} {
+      margin-top: #{$val}px !important;
+    }
+    .#{$prefix}r-md-#{$val} {
+      margin-right: #{$val}px !important;
+    }
+    .#{$prefix}b-md-#{$val} {
+      margin-bottom: #{$val}px !important;
+    }
+    .#{$prefix}l-md-#{$val} {
+      margin-left: #{$val}px !important;
+    }
+    .#{$prefix}x-md-#{$val} {
+      margin-left: #{$val}px !important;
+      margin-right: #{$val}px !important;
+    }
+    .#{$prefix}y-md-#{$val} {
+      margin-top: #{$val}px !important;
+      margin-bottom: #{$val}px !important;
+    }
+    .#{$prefix}-md-#{$val} {
+      margin: #{$val}px !important;
+    }
+  }
+}
+
+.u-mt-large {
+  margin-top: var(--spaceing-large);
+}
+
+.u-mt-medium {
+  margin-top: var(--spaceing-medium);
+}
+
+.u-mt-small {
+  margin-top: var(--spaceing-small);
+}
+
+.u-mt-section {
+  margin-top: var(--base-section-margin);
+}
+
+.u-mb-large {
+  margin-bottom: var(--spaceing-large);
+}
+
+.u-mb-medium {
+  margin-bottom: var(--spaceing-medium);
+}
+
+.u-mb-small {
+  margin-bottom: var(--spaceing-small);
+}
+
+.u-mb-section {
+  margin-bottom: var(--base-section-margin);
+}

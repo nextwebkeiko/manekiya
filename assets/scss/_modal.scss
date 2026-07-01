@@ -1,0 +1,72 @@
+#privacy_modal {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 19999;
+	display: none;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+
+	* {
+		box-sizing: border-box;
+	}
+}
+#privacy_modal.--active {
+	display: block;
+}
+#privacy_modal .modal_inner {
+	padding: 50px 100px;
+	background: white;
+	position: fixed;
+	height: 95%;
+	width: 90%;
+	overflow-y: scroll;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	z-index: 19998;
+}
+#privacy_modal .modal_inner p {
+	white-space: pre-line;
+}
+#privacy_modal .modal_inner .upper {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+#privacy_modal .modal_inner .upper .close-btn {
+	padding: 14px 40px;
+	background: #000;
+	border: 0;
+	appearance: none;
+}
+#privacy_modal .modal_inner .upper .close-btn p {
+	font-weight: bold;
+	color: white;
+}
+#privacy_modal #privacy_overlay {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 19997;
+	background: black;
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+}
+
+@media screen and (max-width: 767px) {
+	#privacy_modal .modal_inner {
+		padding: 50px 12px !important;
+		width: 85% !important;
+	}
+	#privacy_modal .modal_inner .upper .close-btn {
+		padding: 7px 20px;
+	}
+}

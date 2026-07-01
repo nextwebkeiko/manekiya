@@ -1,0 +1,10 @@
+@charset "utf-8";
+// @ PIE
+// ------------------------------------------------------------
+@mixin pie{
+  .ie8 & {
+   // behavior: $pie-behavior;
+    //position: relative;
+  }
+}
+// -pie-background: linear-gradient(top, #ffffff 0%, #dddedd 100%);

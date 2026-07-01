@@ -1,0 +1,11 @@
+// @ Vendor Prefix
+// -------------------------
+$prefixList: -webkit-, -moz-, -ms-, -o-, null;
+
+// @ transition
+// -------------------------
+@mixin my_transition($value...) {
+  @each $prefix in $prefixList {
+    #{$prefix}transition: $value;
+  }
+}

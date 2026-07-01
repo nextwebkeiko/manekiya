@@ -1,0 +1,42 @@
+@use 'sass:map';
+
+$breakpoints: (
+  'xs': 0,
+  'sm': 480,
+  'md': 768,
+  'lg': 1024,
+  'xl': 1280,
+  'index-large': 1120
+);
+
+@mixin mq($key) {
+  $breakpoint: map.get($breakpoints, $key);
+
+  @if $breakpoint != null {
+    @media screen and (max-width: #{$breakpoint - 1}px) {
+      @content;
+    }
+  } @else {
+    @warn "ブレークポイント '#{$key}' は定義されていません。";
+  }
+}
+
+@mixin mq-up($key) {
+  $breakpoint: map.get($breakpoints, $key);
+
+  @if $breakpoint != null {
+    @media screen and (min-width: #{$breakpoint}px) {
+      @content;
+    }
+  } @else {
+    @warn "ブレークポイント '#{$key}' は定義されていません。";
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+// @ Vendor Prefix
+// -------------------------
+$prefixList: -webkit-, -moz-, -ms-, -o-, null;
+
+// @ animation
+// -------------------------
+@mixin animation($name, $duration, $timing, $delay, $count, $direction: null) {
+  @each $prefix in $prefixList {
+      #{$prefix}#{animation}: $name $duration $timing $delay $count $direction;
+  }
+}

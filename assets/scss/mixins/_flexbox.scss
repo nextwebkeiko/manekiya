@@ -1,0 +1,141 @@
+@mixin display-flex() {
+	@include display-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+//  flex-direction property
+//  This Argument is same as W3C Flexbox.
+//  See below:
+//  http://www.w3.org/TR/css3-flexbox/#flex-direction-property
+//  'box-direction' and 'box-orient' is Mixin of Compass
+@mixin flex-direction($direction) {
+	$row: row;
+	$row-reverse: row-reverse;
+	$column: column;
+	$column-reverse: column-reverse;
+	@if $direction == row {
+		@include box-direction(normal);
+		@include box-orient(horizontal);
+		-webkit-flex-direction: $row;
+		-ms-flex-direction: $row;
+		flex-direction: $row;
+	} @else if $direction == row-reverse {
+		@include box-direction(reverse);
+		@include box-orient(horizontal);
+		-webkit-flex-direction: $row-reverse;
+		-ms-flex-direction: $row-reverse;
+		flex-direction: $row-reverse;
+	} @else if $direction == column {
+		@include box-direction(normal);
+		@include box-orient(vertical);
+		-webkit-flex-direction: $column;
+		-ms-flex-direction: $column;
+		flex-direction: $column;	
+	} @else if $direction == column-reverse {
+		@include box-direction(reverse);
+		@include box-orient(vertical);
+		-webkit-flex-direction: $column-reverse;
+		-ms-flex-direction: $column-reverse;
+		flex-direction: $column-reverse;	
+	}
+}
+
+//  align-items properties
+//  This Argument is same as W3C Flexbox.
+//  See below:
+//  http://www.w3.org/TR/css3-flexbox/#align-items-property
+@mixin align-items($align){
+	$flex-align: "";
+	$box-align: "";
+	@if $align == "center" {
+		$flex-align: center;
+		$box-align: center;
+	} @else if $align == "flex-start" {
+		$flex-align: flex-start;
+		$box-align: start;
+	} @else if $align == "flex-end" {
+		$flex-align: flex-end;
+		$box-align: end;
+	} @else if $align == "baseline" {
+		$flex-align: baseline;
+		$box-align: baseline;
+	} @else if $align == "stretch" {
+		$flex-align: stretch;
+		$box-align: stretch;
+	}
+	-webkit-box-align: $box-align;
+	-moz-box-align: $box-align;
+	-ms-flex-align: $box-align;
+	-webkit-align-items: $flex-align;
+	align-items: $flex-align;
+}
+
+//  justify-content property
+//  This Argument is same as W3C Flexbox.
+//  See below:
+//  http://www.w3.org/TR/css3-flexbox/#justify-content-property
+@mixin justify-content($pack) {
+	$flex-content: "";
+	$flex-pac: "";
+	$flex-ms-pack: "";
+	@if $pack == "center" {
+		$flex-content: center;
+		$flex-ms-pack: center;
+		$flex-pac: center;
+	} @else if $pack == "flex-start" {
+		$flex-content: flex-start;
+		$flex-ms-pack: start;
+		$flex-pac: start;
+	} @else if $pack == "flex-end" {
+		$flex-content: flex-end;
+		$flex-ms-pack: end;
+		$flex-pac: end;
+	} @else if $pack == "space-between" {
+		$flex-content: space-between;
+		$flex-ms-pack: justify;
+		$flex-pac: justify;	
+	} @else if $pack == "space-around" {
+		$flex-content: space-around;
+		$flex-ms-pack: distribute;
+		$flex-pac: justify;
+	}
+	-webkit-box-pack: $flex-pac;
+	-moz-box-pack: $flex-pac;
+	-ms-flex-pack: $flex-ms-pack;
+	-webkit-justify-content: $flex-content;
+	justify-content: $flex-content;
+}
+
+//  flex-wrap property
+//  This Argument is same as W3C Flexbox.
+//  See below:
+//  http://www.w3.org/TR/css3-flexbox/#flex-wrap-property
+@mixin flex-wrap($wrap) {
+	-webkit-flex-wrap: $wrap;
+	-ms-flex-wrap: $wrap;
+	flex-wrap: $wrap;
+}
+
+//  align-content property
+//  This Argument is same as W3C Flexbox.
+//  See below:
+//  http://www.w3.org/TR/css3-flexbox/#align-content-property
+@mixin align-content($line) {
+	-webkit-align-content: $line;
+	-ms-flex-line-pack: $line;
+	align-content: $line;
+}
+
+//  order property for flex items
+//  This Argument is same as W3C Flexbox.
+//  See below:
+//  http://www.w3.org/TR/css3-flexbox/#order-property
+@mixin order($num) {
+	-webkit-box-ordinal-group: $num + 1;
+	-moz-box-ordinal-group: $num + 1;
+	-webkit-order: $num;
+	-ms-flex-order: $num;
+	order: $num;
+}

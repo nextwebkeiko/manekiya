@@ -1,0 +1,84 @@
+.information_area {
+	background: #3ca46d;
+	box-sizing: border-box;
+	padding: 60px 0 70px;
+	@media #{$scr_sp} {
+		padding: 50px 17px;
+		height: auto;
+		background: #3ca46d url('../img/top/bg-cta.png') no-repeat 50px bottom;
+		background-size: 100% auto;
+
+		.wrapper {
+			padding: 0;
+		}
+	}
+	.cv_btn {
+		margin: 40px auto 0;
+	}
+
+	h2 {
+		text-align: center;
+		color: #fff;
+		margin: 0 0 28px;
+		font-size: 3.2rem;
+		font-weight: bold;
+
+		@media #{$scr_sp} {
+			font-size: 2.1rem;
+		}
+	}
+}
+.information_block {
+	margin-left: auto;
+	position: relative;
+	box-sizing: border-box;
+	display: flex;
+	background: #fff;
+
+	@media #{$scr_sp} {
+		width: 100%;
+		display: block;
+	}
+
+	@media #{$scr_sp} {
+	}
+}
+
+.information_list {
+	padding: 12px 0 12px 56px;
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+
+	@media #{$scr_sp} {
+		flex-wrap: wrap;
+		padding: 15px 20px;
+	}
+
+	&_element {
+		font-weight: bold;
+		font-size: 2rem;
+		line-height: 1.7;
+		position: relative;
+		padding-left: 45px;
+		padding-top: 6px;
+		padding-bottom: 6px;
+		background: url('../img/top/icon-check.png') no-repeat left center;
+		background-size: 28px auto;
+
+		@media #{$scr_sp} {
+			font-size: 1.6rem;
+			padding-left: 40px;
+			background-position: left 8px;
+		}
+	}
+}
+
+.information_ph {
+	width: 293px;
+
+	@media #{$scr_sp} {
+		width: 100%;
+	}
+}
