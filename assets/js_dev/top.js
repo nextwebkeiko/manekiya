@@ -220,6 +220,10 @@ if ($(".js-reason-slider").length && typeof Swiper !== "undefined") {
       el: ".reason-section__pagination",
       clickable: true,
     },
+    navigation: {
+      prevEl: ".reason-section__button-prev",
+      nextEl: ".reason-section__button-next",
+    },
     breakpoints: {
       768: {
         slidesPerView: 1,

@@ -185,7 +185,8 @@
           <h2 class="section-title section-title--white fadein" id="reason">
             <span>まねきやが加盟店に<br class="u-visible-md">選ばれる理由を<br>少しだけご説明します。 </span>
           </h2>
-          <div class="reason-section__list swiper js-reason-slider">
+          <div class="reason-section__list">
+            <div class="reason-section__list-slider swiper js-reason-slider">
             <div class="swiper-wrapper">
               <div class="reason-section__list-element swiper-slide fadein">
                 <div class="reason-section__list-num">
@@ -264,6 +265,9 @@
                 </div>
               </div>
             </div> 
+            </div>
+            <div class="swiper-button-prev reason-section__button-prev"></div>
+            <div class="swiper-button-next reason-section__button-next"></div>
             <div class="swiper-pagination reason-section__pagination"></div>
           </div>
         </div>
