@@ -193,7 +193,8 @@
                 </div>
                 <div class="reason-section__list-inner">
                   <div class="reason-section__list-ph">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason01.png" alt="イメージ">
+                    <img class="u-visible-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason01.png" alt="イメージ">
+                    <img class="u-hidden-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason01-pc.png" alt="">
                     <span> <span>“事前入金制度”も可能！</span></span>
                   </div>
                   <div class="reason-section__list-content">
@@ -211,7 +212,8 @@
                 </div>
                 <div class="reason-section__list-inner">
                   <div class="reason-section__list-ph">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason02.png" alt="イメージ">
+                    <img class="u-visible-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason02.png" alt="イメージ">
+                    <img class="u-hidden-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason02-pc.png" alt="">
                   </div>
                   <div class="reason-section__list-content">
                     <h3 class="reason-section__list-head">
@@ -229,7 +231,8 @@
                 </div>
                 <div class="reason-section__list-inner">
                   <div class="reason-section__list-ph">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason03.png" alt="イメージ">
+                    <img class="u-visible-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason03.png" alt="イメージ">
+                    <img class="u-hidden-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason03-pc.png" alt="">
                   </div>
                   <div class="reason-section__list-content">
                     <h3 class="reason-section__list-head reason-section__list-head--auto">
@@ -249,7 +252,8 @@
                 </div>
                 <div class="reason-section__list-inner">
                   <div class="reason-section__list-ph">
-                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason04.png" alt="イメージ">
+                    <img class="u-visible-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason04.png" alt="イメージ">
+                    <img class="u-hidden-md" src="<?php bloginfo('template_directory'); ?>/assets/img/top/pict-reason04-pc.png" alt="">
                   </div>
                   <div class="reason-section__list-content">
                     <h3 class="reason-section__list-head reason-section__list-head--auto">

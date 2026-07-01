@@ -222,8 +222,8 @@ if ($(".js-reason-slider").length && typeof Swiper !== "undefined") {
     },
     breakpoints: {
       768: {
-        slidesPerView: "auto",
-        spaceBetween: 44,
+        slidesPerView: 1,
+        spaceBetween: 0,
       },
     },
   });
